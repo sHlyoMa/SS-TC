@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	
+	<definition name="login"
+		template="/WEB-INF/views/tiles/layout-login.jsp">
+		<put-attribute name="title" value="BugTrackingSystem | Log in" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/header-login.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp" />
+	</definition>
+	
+	<definition name="user-template"
+		template="/WEB-INF/views/tiles/layout.jsp">
+		<put-attribute name="title" value=""  />
+		<put-attribute name="menu" value="/WEB-INF/views/tiles/menu.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.jsp" />
+	</definition>
+
+<definition name="WILDCARD:/*/*" extends="user-template">
+		<put-attribute name="title" value="BugTrackingSystem | {1} {2}" />
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+</tiles-definitions>

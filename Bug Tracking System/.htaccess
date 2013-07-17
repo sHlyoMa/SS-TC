@@ -1,0 +1,3 @@
+ErrorDocument 404 /error403.jsp
+ErrorDocument 500 /error403.jsp
+ErrorDocument 403 /error403.jsp
